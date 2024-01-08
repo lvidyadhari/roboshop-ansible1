@@ -3,7 +3,7 @@
   become: yes
   tasks:
    - name: disable current version of mysql
-     ansible.builtin.dnf: dnf module disable mysql -y
+     ansible.builtin.shell: dnf module disable mysql -y
 
    - name: install mysql-server
      ansible.builtin.package:
