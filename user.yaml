@@ -40,10 +40,10 @@
     args:
       chdir: /app
 
-  - name: Copy user service
+  - name: Copy user.service
     ansible.builtin.copy:
-    src: user.service
-    dest: /etc/systemd/system/user.service
+     src: user.service
+     dest: /etc/systemd/system/user.service
 
   - name: daemon reload and start
     ansible.builtin.systemd_service:
