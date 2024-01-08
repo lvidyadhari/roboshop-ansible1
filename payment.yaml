@@ -14,7 +14,7 @@
   - name: create roboshop user
     ansible.builtin.user:
      name: roboshop
-     
+
   - name: Recursively remove app directory
     ansible.builtin.file:
       path: /app
@@ -47,7 +47,7 @@
      daemon_reload: true
 
   - name: copy payment service
-    ansible.builtin.copy
+    ansible.builtin.copy:
      src: payment.service
      dest: /etc/systemd/system/payment.service
 
