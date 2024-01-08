@@ -37,7 +37,7 @@
      dest: /app
      remote_src: yes
 
-  - name: download dependencies
+  - name: install dependencies
     ansible.builtin.package: pip3.6 install -r requirements.txt
     args:
       chdir: /app
