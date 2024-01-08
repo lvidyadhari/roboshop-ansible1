@@ -26,9 +26,9 @@
      name: /app
      state: directory
 
-  - name: downlad the application
+  - name: download the application
     ansible.builtin.get_url:
-     url: curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip
+     url: https://roboshop-builds.s3.amazonaws.com/payment.zip
      dest: /tmp
 
   - name: extract the application
